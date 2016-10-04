@@ -31,3 +31,28 @@ C:\Users\Maiada\Documents\Visual Studio 2015\Projects\whats_pubnub\whats_pubnub\
 C:\Users\Maiada\Documents\Visual Studio 2015\Projects\whats_pubnub\whats_pubnub\obj\Debug\whats_pubnub.csprojResolveAssemblyReference.cache
 C:\Users\Maiada\Documents\Visual Studio 2015\Projects\whats_pubnub\whats_pubnub\obj\Debug\whats_pubnub.dll
 C:\Users\Maiada\Documents\Visual Studio 2015\Projects\whats_pubnub\whats_pubnub\obj\Debug\whats_pubnub.pdb
+E:\whatapp\bin\ApplicationInsights.config
+E:\whatapp\bin\roslyn\csc.exe
+E:\whatapp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\whatapp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\whatapp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\whatapp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\whatapp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\whatapp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\whatapp\bin\roslyn\System.Collections.Immutable.dll
+E:\whatapp\bin\roslyn\System.Reflection.Metadata.dll
+E:\whatapp\bin\roslyn\vbc.exe
+E:\whatapp\bin\roslyn\VBCSCompiler.exe
+E:\whatapp\bin\roslyn\VBCSCompiler.exe.config
+E:\whatapp\bin\whats_pubnub.dll.config
+E:\whatapp\bin\whats_pubnub.dll
+E:\whatapp\bin\whats_pubnub.pdb
+E:\whatapp\bin\Microsoft.AI.DependencyCollector.xml
+E:\whatapp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\whatapp\bin\Microsoft.AI.Web.xml
+E:\whatapp\bin\Microsoft.AI.WindowsServer.xml
+E:\whatapp\bin\Microsoft.ApplicationInsights.xml
+E:\whatapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\whatapp\obj\Debug\whats_pubnub.csprojResolveAssemblyReference.cache
+E:\whatapp\obj\Debug\whats_pubnub.dll
+E:\whatapp\obj\Debug\whats_pubnub.pdb

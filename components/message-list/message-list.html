@@ -1,0 +1,9 @@
+﻿
+
+<div class="portlet-body chat-widget" style="overflow-y: auto; width: auto; height: 300px;">
+    <div ng-repeat="message in messages track by $index" class="row" repeat-complete="listDidRender()">
+        <message-item id="{{message.uuid}}" content="{{message.content}}" sender-uuid="{{message.sender_uuid}}" date="{{message.date}}"></message-item>
+      
+    </div>
+ 
+    </div>

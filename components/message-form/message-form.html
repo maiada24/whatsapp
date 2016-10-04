@@ -1,0 +1,33 @@
+﻿
+    <!--<div class="message-form">
+        <form ng-submit="sendMessage()" class="container">
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="prefix mdi-communication-chat"></i>
+                    <input ng-model="messageContent" type="text" placeholder="Type your message">
+                    <span class="chip left">
+                        <user-avatar uuid="{{uuid}}" />
+                        Anonymous robot #{{uuid}}
+                    </span>
+                </div>
+                <div class="input-field col s2">
+                    <button type="submit" class="waves-effect waves-light btn-floating btn-large">
+                        <i class="mdi-content-send"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>-->
+
+
+<div class="portlet-footer">
+    <form role="form" ng-submit="sendMessage()">
+        <div class="form-group">
+            <textarea ng-model="messageContent" class="form-control" placeholder="Type your message..."></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default pull-right">Send</button>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
