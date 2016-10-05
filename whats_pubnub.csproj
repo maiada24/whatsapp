@@ -148,6 +148,7 @@
     <Content Include="components\message-item\message-item.html" />
     <Content Include="components\message-list\message-list.directive.js" />
     <Content Include="components\message-list\message-list.html" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="lodash.js" />
     <Content Include="node_modules\angular-route\angular-route.js" />
     <Content Include="node_modules\angular-route\angular-route.min.js" />

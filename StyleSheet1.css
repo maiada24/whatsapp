@@ -1,4 +1,45 @@
-﻿
+﻿.mine{
+    color: #080808 !important;
+    background-color: #c0e0c1 !important;
+    padding: 10px;
+    font-size: medium;
+    font-weight: 600;
+    font-style: normal;
+    font-family: cursive;
+    border-radius: 13px;
+}
+.notmine{
+    color: #080808 !important;
+    background-color: #fcf8e3 !important;
+    padding: 10px;
+    font-size: medium;
+    font-weight: 600;
+    font-style: normal;
+    font-family: cursive;
+    border-radius: 13px;
+}
+.timeSpan{
+    margin-top: 8px;
+}
+.txtArea{
+    border-radius: 5px;
+    width: 88%;
+    display:inline;
+}
+.btnSend{
+    margin-top: 0px;
+    width: 11%;
+    padding: 14px;
+    background-color: #34495e;
+    color: #fcf8e3;
+    font-size: larger;
+    border-radius: 11px;
+    float: right;
+    transition-duration: 0.4s;
+}
+.btns :hover{
+    background-color: red !important;
+}
 .portlet {
     margin-bottom: 15px;
 }

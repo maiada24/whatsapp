@@ -34,7 +34,7 @@
 </head>
 <body ng-app="myApp">
  
-    <div class="container bootstrap snippet" ng-controller="ChatCtrl">
+    <!--<div class="container bootstrap snippet" ng-controller="ChatCtrl">
         <div class="row">
             <div class="portlet portlet-default">
                 <div class="portlet-heading">
@@ -54,8 +54,63 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
+    <div class="container bootstrap snippet" ng-controller="ChatCtrl">
+        <div class="row">
+            <div class="portlet portlet-default">
+                <div class="portlet-heading">
+                    <div class="portlet-title">
+                        <h4><i class="fa fa-circle text-green"></i> Jane Smith</h4>
+                    </div>
+                    <div class="portlet-widgets">
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div id="chat" class="panel-collapse collapse in">
+                    <div class="portlet-body chat-widget" style="overflow-y: auto; width: auto; height: 300px;">
+
+                        <div ng-repeat="message in messages" class="row">
+                            <div class="col-lg-12">
+                                <div class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="" alt="">
+                                    </a>
+                                    <div class="messageContent-{{message.sender_uuid}} media-body notmine">
+                                        <h4 class="media-heading">
+                                            
+                                            <span class="small pull-right timeSpan">{{ message.date | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+                                        </h4>
+                                        <div  class="messageContent">{{ message.content }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr><br />
+                        </div>
+                        
+
+                    </div>
+
+
+                    <div class="portlet-footer">
+                        <form role="form" ng-submit="sendMessage(true)">
+                            <div class="form-group">
+                                <textarea ng-model="messageContent" class="txtArea form-control" placeholder="Type your message..."></textarea>
+                                <button type="submit" class="btns btnSend">Send</button>
+                                <!--<div class="clearfix"></div>-->
+                             </div>
+                            <div class="form-group">
+                             
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

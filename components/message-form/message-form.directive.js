@@ -8,8 +8,9 @@
             $scope.uuid = _.random(100).toString();
             $scope.messageContent = '';
             $scope.sendMessage = function () {
-                MessageService.sendMessage($scope.messageContent);
+                MessageService.sendMessage($scope.messageContent, true);
                 $scope.messageContent = '';
+                //$("#contentMsg").removeClass();
             }
         }
     };
