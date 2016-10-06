@@ -94,8 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.config.js" />
-    <Content Include="app.js" />
+    <Content Include="app\app.config.js" />
+    <Content Include="app\app.js" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -121,10 +121,33 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="bin\whats_pubnub.dll" />
     <Content Include="bin\whats_pubnub.pdb" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="bower_components\angular-sanitize\index.js" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies-embed.css" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies-embed.min.css" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies.css" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies.js" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies.min.css" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies.min.js" />
+    <Content Include="bower_components\angular-smilies\dist\angular-smilies.png" />
+    <Content Include="bower_components\angular-smilies\example\index.html" />
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
+    <Content Include="bower_components\ng-emoticons\demo\index.html" />
+    <Content Include="bower_components\ng-emoticons\demo\js\app.js" />
+    <Content Include="bower_components\ng-emoticons\demo\template.html" />
+    <Content Include="bower_components\ng-emoticons\dist\ng-emoticons.min.css" />
+    <Content Include="bower_components\ng-emoticons\dist\ng-emoticons.min.js" />
+    <Content Include="bower_components\ng-emoticons\fonts\emoticons.svg" />
+    <Content Include="bower_components\ng-emoticons\GruntFile.js" />
+    <Content Include="bower_components\ng-emoticons\images\emojis%402x.png" />
+    <Content Include="bower_components\ng-emoticons\images\emojis.png" />
+    <Content Include="bower_components\ng-emoticons\images\loader.svg" />
+    <Content Include="bower_components\ng-emoticons\src\ng-emoticons.css" />
+    <Content Include="bower_components\ng-emoticons\src\ng-emoticons.js" />
     <Content Include="bower_components\pubnub-angular\dist\pubnub-angular-3.2.1.js" />
     <Content Include="bower_components\pubnub-angular\dist\pubnub-angular-3.2.1.min.js" />
     <Content Include="bower_components\pubnub-angular\dist\pubnub-angular.js" />
@@ -140,15 +163,18 @@
     <Content Include="bower_components\pubnub-angular\webpack.config.js" />
     <Content Include="bower_components\satellizer\dist\satellizer.js" />
     <Content Include="bower_components\satellizer\dist\satellizer.min.js" />
-    <Content Include="chat.html" />
-    <Content Include="chat_controller.js" />
-    <Content Include="components\message-form\message-form.directive.js" />
-    <Content Include="components\message-form\message-form.html" />
-    <Content Include="components\message-item\message-item.directive.js" />
-    <Content Include="components\message-item\message-item.html" />
-    <Content Include="components\message-list\message-list.directive.js" />
-    <Content Include="components\message-list\message-list.html" />
-    <Content Include="HtmlPage1.html" />
+    <Content Include="conversations.html" />
+    <Content Include="chatDetails.html" />
+    <Content Include="Controllers\conversations.js" />
+    <Content Include="Controllers\chatDetailsCtrl.js" />
+    <Content Include="img\07b37d9e8af59caf15b0f8e1b49da368.jpg" />
+    <Content Include="img\9e3d174d2806107a435d32bca9c5674a.jpg" />
+    <Content Include="img\boy.png" />
+    <Content Include="img\for-whatsapp-flower-colorful-1920x1200-wallpaper32791.jpg" />
+    <Content Include="img\girl.png" />
+    <Content Include="img\man.png" />
+    <Content Include="img\users-group.png" />
+    <Content Include="img\wonan.png" />
     <Content Include="lodash.js" />
     <Content Include="node_modules\angular-route\angular-route.js" />
     <Content Include="node_modules\angular-route\angular-route.min.js" />
@@ -175,7 +201,7 @@
     <Content Include="bin\whats_pubnub.dll.config" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\whats_pubnub.csprojResolveAssemblyReference.cache" />
-    <Content Include="app.routes.js" />
+    <Content Include="app\app.routes.js" />
     <Content Include="node_modules\angular\angular.min.js.gzip" />
     <Content Include="node_modules\angular\angular.min.js.map" />
     <Content Include="node_modules\angular\bower.json" />
@@ -206,6 +232,25 @@
     <Content Include="bower_components\satellizer\LICENSE" />
     <Content Include="bower_components\satellizer\package.json" />
     <Content Include="bower_components\satellizer\README.md" />
+    <Content Include="bower_components\angular-sanitize\.bower.json" />
+    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="bower_components\angular-sanitize\bower.json" />
+    <Content Include="bower_components\angular-sanitize\LICENSE.md" />
+    <Content Include="bower_components\angular-sanitize\package.json" />
+    <Content Include="bower_components\angular-sanitize\README.md" />
+    <Content Include="bower_components\angular-smilies\.bower.json" />
+    <Content Include="bower_components\angular-smilies\bower.json" />
+    <Content Include="bower_components\angular-smilies\LICENSE" />
+    <Content Include="bower_components\angular-smilies\README.md" />
+    <Content Include="bower_components\ng-emoticons\.bower.json" />
+    <Content Include="bower_components\ng-emoticons\bower.json" />
+    <Content Include="bower_components\ng-emoticons\fonts\emoticons.eot" />
+    <Content Include="bower_components\ng-emoticons\fonts\emoticons.ttf" />
+    <Content Include="bower_components\ng-emoticons\fonts\emoticons.woff" />
+    <Content Include="bower_components\ng-emoticons\LICENSE" />
+    <Content Include="bower_components\ng-emoticons\package.json" />
+    <Content Include="bower_components\ng-emoticons\README.md" />
+    <Content Include="bower_components\ng-emoticons\RELEASES.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -214,12 +259,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.22.19-build00125.js" />
-    <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="services\current_user.js" />
-    <Content Include="services\message-factory.js" />
-    <Content Include="shared\repeat-complete.directive.js" />
-    <Content Include="shared\user-avatar.directive.js" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>

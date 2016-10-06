@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="https://cdn.pubnub.com/pubnub-3.7.21.js"></script>
+    <script src="https://cdn.pubnub.com/sdk/pubnub-angular/pubnub-angular-3.2.1.js"></script>
+
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <script src="app/app.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/app.config.js"></script>
+   
+
+
+    <script src="Controllers/conversations.js"></script>
+    <script src="Controllers/chatDetailsCtrl.js"></script>
+    <script src="lodash.js"></script>
+
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+ 
+    <div class="container bootstrap snippet" ng-controller="conversationsCtrl">
+        <div class="row">
+            <!--<div ng-view class="col-md-8"></div>-->
+            <div class="col-md-4">
+
+                <div class="portlet portlet-default">
+                    <div class="portlet-heading">
+                        <div class="portlet-title">
+                            <i class="fa fa-whatsapp fa-2x fa_custom"></i><h4> WhatsApp</h4>
+                        </div>
+                        <div class="portlet-widgets">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div id="chat" class="panel-collapse collapse in">
+                        <div>
+                            <div class="portlet-body chat-widget" style="overflow-y: auto; width: auto; height: 386px;">
+                                <div ng-repeat="contact in contactList track by $index">
+
+                                    <a href="#chatDetails" ng-click="getContactID(contact.id)">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="media">
+                                                    <div class="pull-left" href="#">
+                                                        <img class="media-object img-circle" ng-src="{{contact.Picture}}" alt="" />
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h4 ng-bind="contact.Name">
+                                                            <span class="small pull-right">12:23 PM</span>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <hr>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-md-4 -->
+
+
+            </div>
+            <div ng-view class="col-md-8"></div>
+        </div>
+    </div>
+
+</body>
+</html>

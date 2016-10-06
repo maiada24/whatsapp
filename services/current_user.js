@@ -1,1 +1,0 @@
-﻿//angular.module('myApp').value('currentUser', _.random(1000000).toString());
