@@ -25,6 +25,5 @@ E:\whatapp\bin\Microsoft.AI.ServerTelemetryChannel.xml
 E:\whatapp\bin\Microsoft.AI.Web.xml
 E:\whatapp\bin\Microsoft.AI.WindowsServer.xml
 E:\whatapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\whatapp\obj\Debug\whats_pubnub.csprojResolveAssemblyReference.cache
-E:\whatapp\obj\Debug\whats_pubnub.dll
-E:\whatapp\obj\Debug\whats_pubnub.pdb
+E:\whatapp\obj\Release\whats_pubnub.dll
+E:\whatapp\obj\Release\whats_pubnub.pdb
