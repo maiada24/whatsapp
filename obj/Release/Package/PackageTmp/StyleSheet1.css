@@ -2,6 +2,7 @@
     margin-top: 47px;
     background-image: url('img/07b37d9e8af59caf15b0f8e1b49da368.jpg');
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .mine {
@@ -26,6 +27,15 @@
     border-radius: 13px;
 }
 
+.imgScale {
+    width: 32px;
+    height: 32px;
+}
+
+.imgCls {
+    display: none;
+}
+
 .timeSpan {
     margin-top: 8px;
 }
@@ -37,13 +47,19 @@
 
 .txtArea {
     border-radius: 5px;
-    width: 88%;
+    width: 76%;
     display: inline;
     padding: 25px;
 }
 
+.pinCustom {
+    margin-left: 0px;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
 .btnSend {
-    margin-top: 0px;
+    margin-top: 2px;
     width: 11%;
     padding: 13px;
     background-color: #34495e;
@@ -223,7 +239,7 @@
 
 .text-green {
     color: #16a085;
-        padding-right: 5px;
+    padding-right: 5px;
 }
 
 .text-orange {

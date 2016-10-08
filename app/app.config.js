@@ -29,7 +29,7 @@ angular.module('myApp').service('MessageService', ['$rootScope', 'Pubnub', '$pub
         var channell;
 
         var Channel;
-       this.getChannel = function (channelName) {
+        this.getHistory = function (channelName) {
             channell = channelName;
               Channel = $pubnubChannel.$extend({
 

@@ -27,3 +27,4 @@ E:\whatapp\bin\Microsoft.AI.WindowsServer.xml
 E:\whatapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\whatapp\obj\Release\whats_pubnub.dll
 E:\whatapp\obj\Release\whats_pubnub.pdb
+E:\whatapp\obj\Release\whats_pubnub.csprojResolveAssemblyReference.cache
