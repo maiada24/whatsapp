@@ -1,6 +1,6 @@
 WhatsApp Project
 
-the project simply 2 views, conversations view shows a static contacts and the chat details view for preview chat details with each contact.
+the project simply 2 views, conversations view shows a static contacts and the chat details view for previewing chat details with each contact.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ The instructions i used for development as follow:
 
 ### Prerequisities
 
-1- creat an account on PubNub https://admin.pubnub.com/#/login .
+1- create an account on PubNub https://admin.pubnub.com/#/login .
 2- Install pubnub-angular plugin to my solution .
 3- Include angularjs to the solution . 
 
@@ -26,7 +26,7 @@ The instructions i used for development as follow:
 
 ## Running and Usage
 
-1- Open "197.45.12.35/whatapp_pub" .
+1- Open "http://197.45.12.35/whatsapp_pub/" .
 
 2- Click on any user from list, it will open chat window with him, and each user has his own chat.
 
@@ -49,6 +49,7 @@ because PubNub data stream is for data, not for large payloads such as photos an
 2- Bootstrap https://v4-alpha.getbootstrap.com/layout/grid/
 3- Lodash library https://lodash.com/
 4- Emoticons site http://www.pic4ever.com/images/
+5- Design template http://www.designerslib.com/bootstrap-chat-box-templates/
 
 
 
