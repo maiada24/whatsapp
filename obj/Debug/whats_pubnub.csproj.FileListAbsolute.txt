@@ -28,3 +28,5 @@ E:\whatapp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\whatapp\obj\Debug\whats_pubnub.csprojResolveAssemblyReference.cache
 E:\whatapp\obj\Debug\whats_pubnub.dll
 E:\whatapp\obj\Debug\whats_pubnub.pdb
+E:\WhatsAppClone\whatapp\obj\Debug\whats_pubnub.dll
+E:\WhatsAppClone\whatapp\obj\Debug\whats_pubnub.pdb

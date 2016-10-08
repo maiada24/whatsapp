@@ -59,6 +59,7 @@
             return;
         }
 
+        //Add class for each sent message to identify sender and receiver 
         setTimeout(function () {
             $(".messageContent-" + $scope.uuid).removeClass("notmine");
             $(".messageContent-" + $scope.uuid).addClass("mine");
@@ -67,6 +68,7 @@
 
         $("#scroll").animate({ scrollTop: $("#scroll")[0].scrollHeight }, 1000);
 
+        //Publish the message content to channel
         Pubnub.publish({
             channel: $scope.channel,
             message: {
@@ -86,11 +88,12 @@
         $('#imgSrc').attr('src', '');
     }
 
+    
     $scope.browseFun = function () {
         $("#browse").click();
     }
 
-    // Subscribing to the ‘messages-channel’ and trigering the message callback
+    // Subscribing to the channel and trigering the message callback
     Pubnub.subscribe({
         channel: $scope.channel,
         callback: receiveMessage,
@@ -103,7 +106,7 @@
         $("#scroll").animate({ scrollTop: $("#scroll")[0].scrollHeight }, 1000);
     }
 
-
+    //Replacing each symbol matches the symbols on $scope.emoticons object with url for the emoticons
     $scope.replaceEmoticons = function (text) {
         patterns = [];
         metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g;
@@ -126,6 +129,7 @@
 
 
 })
+    //Directive for browsing image and then convert it to base64 image 
     .directive('myUpload', [function () {
         return {
             restrict: 'A',
@@ -145,7 +149,7 @@
         };
     }]);
 
-
+//Filter for appending html tag to div safely
 angular.module('myApp')
     .filter('to_trusted', ['$sce', function ($sce) {
         return function (text) {

@@ -1012,8 +1012,6 @@
     <Content Include="img\man.png" />
     <Content Include="img\users-group.png" />
     <Content Include="img\wonan.png" />
-    <Content Include="jquery.emojiarea.js" />
-    <Content Include="jquery.emojiarea.min.js" />
     <Content Include="lodash.js" />
     <Content Include="node_modules\angular-route\angular-route.js" />
     <Content Include="node_modules\angular-route\angular-route.min.js" />
