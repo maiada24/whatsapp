@@ -26,7 +26,7 @@ The instructions i used for development as follow:
 
 ## Running and Usage
 
-1- Open "197.45.12.35/whatapp" .
+1- Open "http://197.45.12.35/whatsapp/" .
 
 2- Click on any user from list, it will open chat window with him, and each user has his own chat.
 
