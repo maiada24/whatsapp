@@ -27,6 +27,12 @@
     border-radius: 13px;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
 .imgScale {
     width: 32px;
     height: 32px;
@@ -47,7 +53,7 @@
 
 .txtArea {
     border-radius: 5px;
-    width: 76%;
+    width: 66%;
     display: inline;
     padding: 25px;
 }
@@ -252,4 +258,20 @@
 
 a {
     display: block;
+}
+.open>.dropdown-menu {
+    display: -webkit-inline-box;
+}
+.emotion-box {
+    margin-left: 14px !important;
+    width: 90%;
+    height: 80px;
+    overflow: auto;
+    margin-top: -33px !important;
+}
+.errorMsg{
+        margin-left: 6px;
+    color: red;
+    font-weight: bolder;
+    display: none;
 }
