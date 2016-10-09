@@ -14,7 +14,7 @@
         $location.path("/conversations");
         $route.reload();
     }
-    
+
 
     $scope.emoticon_url = "http://www.pic4ever.com/images/";
     $scope.emoticons = {
@@ -31,10 +31,13 @@
         ':(': '198.gif',
         ':V': '109.gif',
         '(Y)': '13.gif',
-        ':O': 'be2.gif', 
+        ':O': 'be2.gif',
         ':@': 'bd6.gif'
     };
+    $scope.emoticonss = ['Bananeyessss.gif', 'bd3.gif', '183.gif', 'Banane21.gif', 'Vishenka_11.gif', 'kaffeetrinker_2.gif', '245.gif',
+    '3.gif', 'bl2.gif', '198.gif', '109.gif', '13.gif', 'be2.gif', 'bd6.gif'];
 
+    $scope.emoticonsJson = [{ "Symbol": ":-)", "Name": "Bananeyessss.gif" }, { "Symbol": ":D", "Name": "bd3.gif" }, { "Symbol": ":)", "Name": "183.gif" }, { "Symbol": ":-D", "Name": "Banane21.gif" }, { "Symbol": ":*", "Name": "Vishenka_11.gif" }, { "Symbol": ":$", "Name": "Vishenka_04.gif" }, { "Symbol": ":coffee:", "Name": "kaffeetrinker_2.gif" }, { "Symbol": ":laugh:", "Name": "245.gif" }, { "Symbol": ":bye:", "Name": "3.gif" }, { "Symbol": ":3a", "Name": "bl2.gif" }, { "Symbol": ":(", "Name": "198.gif" }];
 
     $scope.channel = $scope.contact.channel;
     $scope.messages = [];
@@ -52,6 +55,13 @@
     });
 
 
+    $scope.setEmoSymbol = function (emoSymbol) {
+        if ($scope.messageContent)
+            $scope.messageContent = $scope.messageContent + emoSymbol;
+        else
+            $scope.messageContent = emoSymbol;
+    }
+
     // Send the messages over PubNub Network
     $scope.sendMessage = function () {
         //Don't send an empty message 
@@ -59,21 +69,24 @@
             return;
         }
 
+        //Add class for each sent message to identify sender and receiver 
         setTimeout(function () {
             $(".messageContent-" + $scope.uuid).removeClass("notmine");
-            $(".messageContent-" + $scope.uuid).addClass("mine");
+            //    $(".messageContent-" + $scope.uuid).addClass("mine");
         }, 200);
-       
+
 
         $("#scroll").animate({ scrollTop: $("#scroll")[0].scrollHeight }, 1000);
 
+        //Publish the message content to channel
         Pubnub.publish({
             channel: $scope.channel,
             message: {
                 content: $scope.replaceEmoticons($scope.messageContent),
                 sender_uuid: $scope.uuid,
                 date: new Date(),
-                img: $scope.image
+                img: $scope.image,
+                cls: "mine"
             },
             callback: function (m) {
                 console.log(m);
@@ -86,11 +99,12 @@
         $('#imgSrc').attr('src', '');
     }
 
+
     $scope.browseFun = function () {
         $("#browse").click();
     }
 
-    // Subscribing to the ‘messages-channel’ and trigering the message callback
+    // Subscribing to the channel and trigering the message callback
     Pubnub.subscribe({
         channel: $scope.channel,
         callback: receiveMessage,
@@ -103,8 +117,11 @@
         $("#scroll").animate({ scrollTop: $("#scroll")[0].scrollHeight }, 1000);
     }
 
-
+    //Replacing each symbol matches the symbols on $scope.emoticons object with url for the emoticons
     $scope.replaceEmoticons = function (text) {
+        if (text) {
+
+        
         patterns = [];
         metachars = /[[\]{}()*+?.\\|^$\-,&#\s]/g;
 
@@ -122,15 +139,18 @@
               '<img src="' + $scope.emoticon_url + $scope.emoticons[match] + '"/>' :
               match;
         });
+        }
     }
 
 
 })
+    //Directive for browsing image and then convert it to base64 image 
     .directive('myUpload', [function () {
         return {
             restrict: 'A',
             link: function ($scope, elem, attrs) {
                 var reader = new FileReader();
+
                 reader.onload = function (e) {
                     console.log(" e.target.result: " + e.target.result);
 
@@ -139,16 +159,29 @@
                 }
 
                 elem.on('change', function () {
+                    var size = $('#browse')[0].files[0].size;
+                    //alert(size/1024);
+                    if ((size / 1024) > 32) {
+                       // alert("inside");
+                        $('#error').css('display', 'block');
+                        return;
+                    }
+                    $('#error').css('display', 'none');
                     reader.readAsDataURL(elem[0].files[0]);
                 });
             }
         };
+
+
     }]);
 
-
+//Filter for appending html tag to div safely
 angular.module('myApp')
     .filter('to_trusted', ['$sce', function ($sce) {
         return function (text) {
             return $sce.trustAsHtml(text);
         };
+
+
+
     }]);
